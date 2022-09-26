@@ -11,10 +11,7 @@ public class Check extends Payment {
 
 	private String checknumber;
 	
-	private String checkCode;
 	
-	private String checkLine;
-
 	public String getChecknumber() {
 		return checknumber;
 	}
