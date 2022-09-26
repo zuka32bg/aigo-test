@@ -10,6 +10,8 @@ import javax.persistence.Table;
 public class Check extends Payment {
 
 	private String checknumber;
+	
+	private String checkcode;
 
 	public String getChecknumber() {
 		return checknumber;
