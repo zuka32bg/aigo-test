@@ -14,7 +14,7 @@ public class Customer {
 	private int id;
 	private String name;
 	private String email;
-	private String lastName;
+	private String fullName;
 	@Embedded
 	private Address address;
 
