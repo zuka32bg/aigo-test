@@ -9,7 +9,7 @@ public class Address {
 	private String city;
 	private String state;
 	private String zipcode;
-	private String streetNumber;
+	private String state2;
 
 	public String getCity() {
 		return city;
