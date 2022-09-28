@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
 @Entity
 public class Customer {
 	@Id
@@ -16,21 +15,39 @@ public class Customer {
 	private Long id;
 	private String number;
 	private String address;
-	@OneToMany(mappedBy = "customer" )
-	private Set <PhoneNumber> numbers;
-	
-	public long getId() {
+	@OneToMany(mappedBy = "customer")
+	private Set<PhoneNumber> numbers;
+
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public Set <PhoneNumber> getNumbers() {
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public Set<PhoneNumber> getNumbers() {
 		return numbers;
 	}
-	public void setNumbers(Set <PhoneNumber> numbers) {
+
+	public void setNumbers(Set<PhoneNumber> numbers) {
 		this.numbers = numbers;
 	}
-	
+
 }
