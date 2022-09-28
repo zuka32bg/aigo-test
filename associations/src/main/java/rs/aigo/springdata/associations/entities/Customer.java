@@ -15,10 +15,9 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String number;
+
 	@OneToMany(mappedBy = "customer" )
 	private Set <PhoneNumber> numbers;
-	
-	
 	
 	public long getId() {
 		return id;
