@@ -13,8 +13,7 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	private String number;
-	private String address;
+	private String name;
 	@OneToMany(mappedBy = "customer")
 	private Set<PhoneNumber> numbers;
 
@@ -26,21 +25,14 @@ public class Customer {
 		this.id = id;
 	}
 
-	public String getNumber() {
-		return number;
+	public String getName() {
+		return name;
 	}
 
-	public void setNumber(String number) {
-		this.number = number;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
 
 	public Set<PhoneNumber> getNumbers() {
 		return numbers;
