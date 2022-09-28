@@ -1,9 +1,12 @@
 package rs.aigo.springdata.associations.entities;
 
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 
 @Entity
@@ -12,8 +15,9 @@ public class Customer {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String number;
-	@ManyToMany(mappedBy = "customer" )
-	private Set <PhoneNumbers> number;
+
+	@OneToMany(mappedBy = "customer" )
+	private Set <PhoneNumber> numbers;
 	
 	public long getId() {
 		return id;
@@ -26,6 +30,12 @@ public class Customer {
 	}
 	public void setNumber(String number) {
 		this.number = number;
+	}
+	public Set <PhoneNumber> getNumbers() {
+		return numbers;
+	}
+	public void setNumbers(Set <PhoneNumber> numbers) {
+		this.numbers = numbers;
 	}
 	
 }
