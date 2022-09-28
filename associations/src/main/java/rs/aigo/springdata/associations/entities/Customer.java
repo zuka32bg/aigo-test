@@ -16,7 +16,6 @@ public class Customer {
 	private Long id;
 	private String number;
 	private String address;
-
 	@OneToMany(mappedBy = "customer" )
 	private Set <PhoneNumber> numbers;
 	
@@ -26,12 +25,7 @@ public class Customer {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getNumber() {
-		return number;
-	}
-	public void setNumber(String number) {
-		this.number = number;
-	}
+
 	public Set <PhoneNumber> getNumbers() {
 		return numbers;
 	}
