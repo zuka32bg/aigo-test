@@ -14,7 +14,8 @@ public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
-	
+	private String number;
+	private String address;
 	@OneToMany(mappedBy = "customer" )
 	private Set <PhoneNumber> numbers;
 	
