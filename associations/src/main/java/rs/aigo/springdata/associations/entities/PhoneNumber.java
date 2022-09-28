@@ -18,6 +18,7 @@ public class PhoneNumber {
 	@ManyToOne
 	@JoinColumn(name ="customer_id")
 	private Customer customer;
+  
 	
 	
 	public Long getId() {
